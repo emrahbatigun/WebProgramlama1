@@ -1,0 +1,970 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="headDefault"><title>
+	
+        Erciyes Öğrenci Bilgi Sistemi 
+    
+</title><link href="obisis.css" type="text/css" rel="stylesheet" />
+
+</head> 
+<body id="bodyDefault" style="margin:0" onpageshow="tabKontrol();">
+    
+    <form name="Form1" method="post" action="./" onsubmit="javascript:return WebForm_OnSubmit();" id="Form1">
+
+        <div>
+        
+
+        <table cellspacing="0" cellpadding="0" width="100%" border="0">
+            <tbody>
+                <tr valign="top">
+                    <td>
+                        
+<table class="HeadAp" cellspacing="0" width="100%" border="0">
+    <tbody>
+        <tr valign="top">
+            <td class="SiteLink" align="right" background="images/bars.gif" colspan="3">
+                <span id="Banner1_lblWellcomeMsg" style="color:#EEEEEE;">IP:10.10.10.10 </span>
+                
+                
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td width="10" rowspan="2">
+                &nbsp;
+            </td>
+            <td height="110" valign="middle">
+                <table>
+                    <tr>
+                        <td>
+                            <img src="obisis.gif" id="Banner1_imgLogo" alt="obisisLogo" /></td>
+                        <td>
+                            <span id="Banner1_siteName" class="SiteTitle">Erciyes Öğrenci Bilgi Sistemi </span></td>
+                    </tr>
+                </table>
+            </td>
+            <td align="right" valign="middle" width="50%">
+                
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table id="Banner1_tabs" class="OtherTabsAp" cellspacing="0" border="0" style="border-collapse:collapse;">
+	<tr>
+		<td class="SelectedTab" style="border-width:1pt;border-style:solid;height:25px;">
+                        &nbsp;
+                        <a id="Banner1_tabs_ctl00_HyperLink1" class="SelectedTab" href="Default.aspx?tabInd=0&amp;tabNo=0" style="background-color:White;">Ana Sayfa</a>                        
+                        &nbsp;
+                    </td><td style="border-width:1pt;border-style:solid;height:25px;">
+                        &nbsp;
+                        <a id="Banner1_tabs_ctl01_HyperLink1" class="OtherTabs" href="Default.aspx?tabInd=1&amp;tabNo=14">Dosyalar</a>                        
+                        &nbsp;
+                    </td><td style="border-width:1pt;border-style:solid;height:25px;">
+                        &nbsp;
+                        <a id="Banner1_tabs_ctl02_HyperLink1" class="OtherTabs" href="Default.aspx?tabInd=2&amp;tabNo=15">Sıkça Sorulan Sorular</a>                        
+                        &nbsp;
+                    </td>
+	</tr>
+</table></td>
+        </tr>
+    </tbody>
+</table>
+
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <br />
+                        <table cellspacing="0" cellpadding="4" width="100%" border="0">
+                            <tbody>
+                                <tr valign="top">
+                                    <td id="LeftPan">
+                                    
+<style type="text/css">
+  
+    .rcLabelClass {
+    position: relative;
+   
+    
+    color:black;
+    width:120px;
+     font-size: 12px;
+}
+    .rcTextBoxClass {
+    position: relative;
+    width: 120px;
+    background-color:#e6e6e6;
+    margin-top:20px;
+        
+}
+.rcCaptchaAudioLink {
+    display: block;
+    position: absolute;
+  
+    height: 40px;
+    width: 120px;
+    background: url('images/audioButton.png') no-repeat;
+    font-size: 11px;
+    line-height: 22px;
+    text-decoration: none;
+    padding-left: 28px;
+    padding-top:1px;
+    color:red;
+    
+}
+.rcRefreshImage {
+    display:block;
+    position:absolute;
+    left:125px;
+    height: 24px;
+    width: 60px;
+    margin-top:-25px;
+    background: url('images/reloadButton.png') no-repeat;
+   
+    text-decoration:none;
+
+
+    
+}
+
+</style>
+<table cellspacing="0" cellpadding="0" border="0">
+    <tbody>
+        <tr>
+            <td >
+                <img id="ctl02_Image1" src="obisis.jpg" style="border-width:0px;" />
+                <span class="NormalBold">Sisteme giriş için<br /> Öğrenci No ve Şifrenizi<br /> yazıp Giriş'e tıklayınız.</span>
+                <hr width="100%" noshade="noshade" size="1" />
+                <span class="Normal">Öğrenci No:</span>
+                <br />
+                <input name="ctl02$txtboxOgrenciNo" type="text" maxlength="10" id="ctl02_txtboxOgrenciNo" class="NormalTextBox" style="width:120px;" />
+                <br />
+                <span class="Normal">Şifre:</span>
+                <br />
+                <input name="ctl02$txtBoxSifre" type="password" maxlength="30" id="ctl02_txtBoxSifre" class="NormalTextBox" style="width:120px;" />      
+            </td>
+        </tr>
+        <tr>
+            <td>
+              
+            
+               <br />
+                <div id="ctl02_RadCaptcha1" class="RadCaptcha RadCaptcha_Default" style="width:132px;">
+	<!-- 2020.3.915.40 --><span id="ctl02_RadCaptcha1_ctl00" style="color:Red;display:none;"></span><div id="ctl02_RadCaptcha1_SpamProtectorPanel">
+		<div id="ctl02_RadCaptcha1_ctl01">
+			<img id="ctl02_RadCaptcha1_CaptchaImageUP" alt="" src="security.jpg" style="height:32px;width:120px;border-width:0px;display:block;" /><a id="ctl02_RadCaptcha1_CaptchaLinkButton" class="rcRefreshImage" title="" href="javascript:__doPostBack(&#39;ctl02$RadCaptcha1$CaptchaLinkButton&#39;,&#39;&#39;)" style="display:block;"></a><a href="Telerik.Web.UI.WebResource.axd?type=cah&amp;isc=true&amp;guid=54b04bb3-feed-4432-848c-39c814c03612" id="ctl02_RadCaptcha1_CaptchaAudioCodeUP" title="  Kodu Dinleyiniz" class="rcCaptchaAudioLink" style="display:block;">  Kodu Dinleyiniz</a>
+		</div><p><input name="ctl02$RadCaptcha1$CaptchaTextBox" type="text" maxlength="5" id="ctl02_RadCaptcha1_CaptchaTextBox" class="rcTextBoxClass" /><label for="ctl02_RadCaptcha1_CaptchaTextBox" id="ctl02_RadCaptcha1_CaptchaTextBoxLabel" class="rcLabelClass">Gösterilen Kodu Yazınız</label></p>
+	</div><input id="ctl02_RadCaptcha1_ClientState" name="ctl02_RadCaptcha1_ClientState" type="hidden" />
+</div>
+                 
+
+            </td>
+        </tr>
+        <tr>
+            <td >
+                <br />
+                <br />
+                <input type="submit" name="ctl02$btnLogin" value="Giriş" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl02$btnLogin&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl02_btnLogin" class="NormalBold" style="width:120px;" />                  
+            </td>
+        </tr>
+        <tr>
+            <td >
+                &nbsp;
+            </td>
+        </tr>        
+        <tr>
+            <td >
+
+                <a id="ctl02_lbtnDontKnowPassword" class="CommandButton2" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl02$lbtnDontKnowPassword&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Şifremi Bilmiyorum</a>
+            </td>
+        </tr>
+        <tr>
+            <td >
+                &nbsp;
+            </td>
+        </tr>       
+        <tr>
+            <td align="center" >
+                
+            </td>
+        </tr>
+        <tr>
+            <td >
+                &nbsp;
+            </td>
+        </tr>   
+        <tr>
+            <td >
+                <span id="ctl02_lblLoginMessage" class="NormalRed"></span>
+            </td>
+        </tr>     
+          
+        <tr>
+            <td ></td>
+        </tr>     
+          
+        <tr>
+            <td align="center" >
+                <a href="http://engelsiz.erciyes.edu.tr" target="_blank"><img id="ctl02_imgEngelsizERU" src="http://engelsiz.erciyes.edu.tr/images/engelsiz.png" style="border-width:0px;" /></a>
+            </td>
+        </tr>     
+          
+    </tbody>
+</table>
+<br />
+</td>
+
+                                    <td id="CenterPan">
+                                    
+
+<table cellspacing="0" cellpadding="0" width="100%">
+	<tbody>
+		<tr>
+		    <td width="40">
+		        <img id="ctl03_uscDuyuruTitle_imgLogo" src="news.gif" style="border-width:0px;" />
+		    </td>
+			<td align="left" valign="middle">
+				<span id="ctl03_uscDuyuruTitle_lblTitle" class="Head">Duyurular</span>
+			</td>
+			<td align="right" valign ="bottom" >
+				<a id="ctl03_uscDuyuruTitle_btnEdit" class="CommandButton"></a>
+			</td>
+            <td align="right" valign="bottom">
+                
+                &nbsp;
+            </td>
+		</tr>
+		<tr>
+			<td colspan="4">
+				<hr/>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<table id="ctl03_dlDuyuru" cellspacing="0" cellpadding="4" border="0" style="width:98%;border-collapse:collapse;">
+	<tr>
+		<td>
+        
+        <span class="NormalBlue">
+            <font color=red>DUYURU1</font>
+        </span>
+        <span class="Normal">
+            <p>
+                
+                <table id="tb1">
+                    <tr>
+                        <td id="HtmlIcerik" class="Normal">DUYURU <br/><br/>
+
+                        </td>
+                    </tr>
+                </table>
+            </p>
+                                
+                
+            
+        </span>
+        <hr />
+    </td>
+	</tr><tr>
+		<td>
+        
+        <span class="NormalBlue">
+            DUYURU2
+        </span>
+        <span class="Normal">
+            <p>
+                
+                <table id="tb1">
+                    <tr>
+                        <td id="HtmlIcerik" class="Normal">DUYURU <br/><br/>
+
+                        </td>
+                    </tr>
+                </table>
+            </p>
+                                
+                
+            
+        </span>
+        <hr />
+    </td>
+	</tr><tr>
+	
+		<td>
+        
+        <span class="NormalBlue">
+            <font color=red>DUYURU3</font>
+        </span>
+        <span class="Normal">
+            <p>
+                
+                <table id="tb1">
+                    <tr>
+                        <td id="HtmlIcerik" class="Normal">DUYURU <br/><br/>
+
+                        </td>
+                    </tr>
+                </table>
+            </p>
+                                
+                
+            
+        </span>
+        <hr />
+    </td>
+	</tr><tr>
+	
+		<td>
+        
+        <span class="NormalBlue">
+            DUYURU4
+        </span>
+        <span class="Normal">
+            <p>
+                
+                <table id="tb1">
+                    <tr>
+                        <td id="HtmlIcerik" class="Normal">DUYURU <br/><br/>
+
+                        </td>
+                    </tr>
+                </table>
+            </p>
+                                
+                
+            
+        </span>
+        <hr />
+    </td>
+	</tr><tr>
+	
+		<td>
+        
+        <span class="NormalBlue">
+            <font color=red>DUYURU5</font>
+        </span>
+        <span class="Normal">
+            <p>
+                
+                <table id="tb1">
+                    <tr>
+                        <td id="HtmlIcerik" class="Normal">DUYURU <br/><br/>
+
+                        </td>
+                    </tr>
+                </table>
+            </p>
+                                
+                
+            
+        </span>
+        <hr />
+    </td>
+	</tr><tr>
+	
+		<td>
+        
+        <span class="NormalBlue">
+            DUYURU6
+        </span>
+        <span class="Normal">
+            <p>
+                
+                <table id="tb1">
+                    <tr>
+                        <td id="HtmlIcerik" class="Normal">DUYURU<br/><br/> 
+
+                        </td>
+                    </tr>
+                </table>
+            </p>
+                                
+                
+            
+        </span>
+        <hr />
+    </td>
+	</tr><tr>
+	
+		<td>
+        
+        <span class="NormalBlue">
+            <font color=red>DUYURU7</font>
+        </span>
+        <span class="Normal">
+            <p>
+                
+                <table id="tb1">
+                    <tr>
+                        <td id="HtmlIcerik" class="Normal">DUYURU <br/><br/>
+
+                        </td>
+                    </tr>
+                </table>
+            </p>
+                                
+                
+            
+        </span>
+        <hr />
+    </td>
+	</tr><tr>
+	
+		<td>
+        
+        <span class="NormalBlue">
+            DUYURU8
+        </span>
+        <span class="Normal">
+            <p>
+                
+                <table id="tb1">
+                    <tr>
+                        <td id="HtmlIcerik" class="Normal">DUYURU <br/><br/>
+
+                        </td>
+                    </tr>
+                </table>
+            </p>
+                                
+                
+            
+        </span>
+        <hr />
+    </td>
+	</tr><tr>
+	
+		<td>
+        
+        <span class="NormalBlue">
+            <font color=red>DUYURU9</font>
+        </span>
+        <span class="Normal">
+            <p>
+                
+                <table id="tb1">
+                    <tr>
+                        <td id="HtmlIcerik" class="Normal">DUYURU <br/><br/>
+
+                        </td>
+                    </tr>
+                </table>
+            </p>
+                                
+                
+            
+        </span>
+        <hr />
+    </td>
+	</tr><tr>
+
+		<td>
+        
+        <span class="NormalBlue">
+            DUYURU10
+        </span>
+        <span class="Normal">
+            <p>
+                
+                <table id="tb1">
+                    <tr>
+                        <td id="HtmlIcerik" class="Normal">Bu kısım Erciyes Üniversitesi Öğrenci Bilgi Sistemi (https://www.obisis.erciyes.edu.tr) sitesinin ana sayfasının son kısmıdır. Bu sayfa Erciyes Üniversitesi Bilgisayar Mühendisliği BS435 kodlu Web Programlama 1 adlı 4. Sınıf dersinin vize ödevi için hazırlanmıştır.<br/><br/>
+
+                        </td>
+                    </tr>
+                </table>
+            </p>
+                                
+                
+            
+        </span>
+        <hr />
+    </td>
+	</tr><tr>
+
+
+</table></td>
+
+                                    
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        </div>
+    
+
+
+
+</form>
+    <p>
+        &nbsp;</p>
+    <div style="position: fixed; left: 0px; bottom: 0px; width: 100%;">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr valign="middle">
+                <td align="center" class="HeadAp" colspan="2" valign="bottom">
+                    <span id="lblFooter" class="NormalWhite">BS435 Web Programlama 1 Dersi Vize Ödevi</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+<html> 
+
+<h1 align="center" style ="color:green">HAKKINDA SAYFASI</h1>
+
+<p style='margin-top:4.35pt;margin-right:133.15pt;margin-bottom:0cm;margin-left:135.1pt;text-align:center;line-height:36.3pt;font-size:42px;font-family:"Trebuchet MS",sans-serif;font-weight:bold;'>
+	<span style="color:#333333;">Emrah BATIGUN</span>
+</p>
+<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:0cm;margin-right:133.2pt;margin-bottom:.0001pt;margin-left:135.05pt;text-align:center;line-height:8.85pt;'>
+	<span style='font-size:10px;font-family:"Verdana",sans-serif;color:#0394DE;'>COMPUTER ENGINEERING/SCIENCE STUDENT</span>
+</p>
+<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:7.0pt;margin-right:133.2pt;margin-bottom:.0001pt;margin-left:135.1pt;text-align:center;'>
+	<span style="font-size:9px;font-family:Webdings;color:#333333;"></span>
+	<span style='font-size:9px;font-family:"Times New Roman",serif;color:#333333;'>&nbsp;</span>
+	<span style='font-size:9px;font-family:"Arial",sans-serif;color:#333333;'>+90 (541) 400 65 52 |&nbsp;</span>
+	<a href="mailto:%20batigunemrah@gmail.com">
+		<span style="font-size:9px;font-family:Webdings;color:windowtext;text-decoration:none;"></span>
+		<span style='font-size:9px;font-family:"Times New Roman",serif;color:windowtext;text-decoration:none;'>&nbsp;</span>
+		<span style='font-size:9px;font-family:"Arial",sans-serif;color:windowtext;text-decoration:none;'>batigunemrah@gmail.com</span>
+	</a>
+	<span style='font-size:9px;font-family:"Arial",sans-serif;'>&nbsp;</span>
+</p>
+<p style='margin-top:2.9pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:14.25pt;text-indent:0cm;font-size:12px;font-family:"Trebuchet MS",sans-serif;margin:0cm;'>
+	<span style='font-size:11px;font-family:"Arial",sans-serif;'>&nbsp;</span>
+</p>
+<div style="margin:auto; width: 50%; padding: 10px;">
+	<p style='margin-top:5.75pt;margin-right:0cm;margin-bottom:0cm;margin-left:5.65pt;font-size:21px;font-family:"Trebuchet MS",sans-serif;font-weight:bold;'>
+		<span style="color:#0394DE;">Education&nbsp;</span>
+		<u>
+			<span style='font-family:"Times New Roman",serif;color:#0394DE;font-weight:normal;'>&nbsp;</span>
+		</u>
+		<u>
+			<span style='font-family:"Times New Roman",serif;color:#0394DE;font-weight:normal;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>
+		</u>
+	</p>
+	<div style='margin:auto;font-size:15px;font-family:"Trebuchet MS",sans-serif;'>
+		<ul style="margin-bottom:0cm;list-style-type: disc;margin-left:31.65px;">
+			<li style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;'>
+				<strong>
+					<span style="font-size:13px;color:#414141;">Erciyes University &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>
+				</strong>
+				<em>
+					<span style="font-size:;color:#0394DE;">Kayseri/TURKEY</span>
+				</em>
+			</li>
+		</ul>
+	</div>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:3.3pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:5.65pt;'>
+		<span style='font-size:11px;font-family:"Verdana",sans-serif;color:#5D5D5D;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;B</span>
+		<span style='font-size:11px;font-family:"Verdana",sans-serif;color:#5D5D5D;'>ACHELOR</span>
+		<span style='font-size:11px;font-family:"Verdana",sans-serif;color:#5D5D5D;'>&nbsp;</span>
+		<span style='font-size:11px;font-family:"Verdana",sans-serif;color:#5D5D5D;'>OF</span>
+		<span style='font-size:11px;font-family:"Verdana",sans-serif;color:#5D5D5D;'>&nbsp;</span>
+		<span style='font-size:11px;font-family:"Verdana",sans-serif;color:#5D5D5D;'>COMPUTER ENGINEERING/SCIENCE</span>
+		<span style='font-size:11px;font-family:"Verdana",sans-serif;color:#5D5D5D;'>,&nbsp;</span>
+		<em>
+			<span style="font-size:11px;color:#5D5D5D;">September 2017 - Present</span>
+		</em>
+	</p>
+	<div style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;'>
+		<ul style="margin-bottom:0cm;list-style-type: disc;margin-left:31.65px;">
+			<li style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;'>
+				<strong>
+					<span style="font-size:12px;color:#333333;">AGH UNIVERSITY OF SCIENCE AND TECHNOLOGY</span>
+				</strong>
+				<span style="font-size:12px;">, Krakow, POLAND &mdash;&nbsp;</span>
+				<em>
+					<span style="font-size:11px;color:#5D5D5D;">Semester&nbsp;Abroad&nbsp;Fall&nbsp;2018 - 2019</span>
+				</em>
+			</li>
+		</ul>
+	</div>
+	<p style='margin-top:.2pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:0cm;text-indent:0cm;font-size:12px;font-family:"Trebuchet MS",sans-serif;'>
+		<em>
+			<span style="font-size:19px;">&nbsp;</span>
+		</em>
+	</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-left:5.65pt;'>
+		<strong>
+			<span style="font-size:21px;color:#0394DE;">Skills&nbsp;</span>
+		</strong>
+		<u>
+			<span style='font-size:21px;font-family:"Times New Roman",serif;color:#0394DE;'>&nbsp;</span>
+		</u>
+		<u>
+			<span style='font-size:21px;font-family:"Times New Roman",serif;color:#0394DE;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
+		</u>
+	</p>
+	<p style='margin-top:5.95pt;margin-right:0cm;margin-bottom:0cm;margin-left:14.25pt;text-indent:-8.0pt;font-size:12px;font-family:"Trebuchet MS",sans-serif;'>
+		<strong>
+			<span style="font-size:13px;color:#414141;">Languages &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;:&nbsp;</span>
+		</strong>
+		<span style="font-size:13px;color:#414141;">Advanced English, Basic Spanish</span>
+	</p>
+	<p style='margin-top:5.95pt;margin-right:0cm;margin-bottom:0cm;margin-left:14.25pt;text-indent:-8.0pt;font-size:12px;font-family:"Trebuchet MS",sans-serif;'>
+		<strong>
+			<span style="font-size:13px;color:#414141;">Programming Languages :</span>
+		</strong>
+		<span style="color:#333333;">&nbsp;</span>
+		<span style="font-size:13px;color:#333333;">Python,&nbsp;Java,&nbsp;Basic C#/C</span>
+	</p>
+	<p style='margin-top:5.95pt;margin-right:0cm;margin-bottom:0cm;margin-left:14.25pt;text-indent:-8.0pt;font-size:12px;font-family:"Trebuchet MS",sans-serif;'>
+		<strong>
+			<span style="font-size:13px;color:#414141;">Databases</span>
+		</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 
+		<span style="font-size:13px;">SQL, Firebase, MongoDB</span>
+	</p>
+	<p style='margin-top:1.95pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:5.65pt;text-indent:0cm;font-size:12px;font-family:"Trebuchet MS",sans-serif;'>
+		<strong>
+			<span style="font-size:13px;color:#414141;">Platforms &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;:&nbsp;</span>
+		</strong>
+		<span style="font-size:13px;color:#414141;">Visual Studio, IntelliJ, Android Studio, Visual Studio Code, Microsoft SQL Server, Linux</span>
+	</p>
+	<p style='margin-top:1.95pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:5.65pt;text-indent:0cm;font-size:12px;font-family:"Trebuchet MS",sans-serif;'>
+		<strong>
+			<span style="font-size:13px;color:#414141;">Interests &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :</span>
+		</strong>
+		<span style="font-size:13px;">Cyber Attacks, Aircrafts, Driving</span>
+	</p>
+	<p style='margin-top:1.95pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:5.65pt;text-indent:0cm;font-size:12px;font-family:"Trebuchet MS",sans-serif;'>
+		<strong>
+			<span style="font-size:13px;">Enthusiasts&nbsp;</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :&nbsp;
+		</strong>
+		<span style="font-size:13px;">Cyber Security, Ethical Hacking</span>
+	</p>
+	<p style='margin-top:.1pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:0cm;text-indent:0cm;font-size:12px;font-family:"Trebuchet MS",sans-serif;'>
+		<span style="font-size:17px;">&nbsp;</span>
+	</p>
+	<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.65pt;font-size:21px;font-family:"Trebuchet MS",sans-serif;font-weight:bold;'>
+		<span style="color:#0394DE;">Experience</span>
+		<span style="color:#0394DE;">&nbsp;</span>
+		<u>
+			<span style='font-family:"Times New Roman",serif;color:#0394DE;font-weight:normal;'>&nbsp;</span>
+		</u>
+		<u>
+			<span style='font-family:"Times New Roman",serif;color:#0394DE;font-weight:normal;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
+		</u>
+	</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:8.65pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:5.65pt;'>
+		<strong>
+			<span style="font-size:13px;color:#414141;">APEX CABLE SYSTEMS INDUSTRY &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>
+		</strong>
+		<em>
+			<span style="font-size:12px;color:#0394DE;">Kayseri/TURKEY</span>
+		</em>
+	</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:3.3pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:5.65pt;'>
+		<strong>
+			<span style='font-size:11px;font-family:"Verdana",sans-serif;color:#5D5D5D;'>Worker</span>
+		</strong>
+		<span style='font-size:11px;font-family:"Verdana",sans-serif;color:#5D5D5D;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
+		<em>
+			<span style="font-size:11px;color:#5D5D5D;">Summer 2017</span>
+		</em>
+	</p>
+	<ul style="list-style-type: disc;margin-left:31.65px;">
+		<li>
+			<span style="font-size:12px;">Worked on producing of some materials.</span>
+		</li>
+		<li>
+			<span style="font-size:12px;">Worked on transport of materials.&nbsp;</span>
+		</li>
+		<li>
+			<span style="font-size:12px;">Helped on database updates.</span>
+		</li>
+	</ul>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:6.5pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:5.65pt;'>
+		<strong>
+			<span style="font-size:13px;color:#414141;">ERGUVAN CAFE AND RESTAURANT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>
+		</strong>
+		<em>
+			<span style="font-size:12px;color:#0394DE;">Kayseri/TURKEY</span>
+		</em>
+	</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:3.3pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:5.65pt;'>
+		<strong>
+			<span style='font-size:11px;font-family:"Verdana",sans-serif;color:#5D5D5D;'>Waiter</span>
+		</strong>
+		<span style='font-size:11px;font-family:"Verdana",sans-serif;color:#5D5D5D;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>
+		<em>
+			<span style="font-size:11px;color:#5D5D5D;">Summer 2018</span>
+		</em>
+	</p>
+	<div style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;'>
+		<ul style="margin-bottom:0cm;list-style-type: disc;margin-left:32.25px;">
+			<li style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;'>
+				<span style="font-size:12px;">Worked on food service.</span>
+			</li>
+		</ul>
+	</div>
+	<p style='margin-top:.2pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:0cm;text-indent:0cm;font-size:12px;font-family:"Trebuchet MS",sans-serif;'>
+		<span style="font-size:19px;">&nbsp;</span>
+	</p>
+	<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:5.65pt;font-size:21px;font-family:"Trebuchet MS",sans-serif;font-weight:bold;'>
+		<span style="color:#0394DE;">Projects&nbsp;</span>
+		<u>
+			<span style='font-family:"Times New Roman",serif;color:#0394DE;font-weight:normal;'>&nbsp;</span>
+		</u>
+		<u>
+			<span style='font-family:"Times New Roman",serif;color:#0394DE;font-weight:normal;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
+		</u>
+	</p>
+	<p style='margin-top:2.45pt;margin-right:0cm;margin-bottom:0cm;margin-left:14.25pt;text-indent:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;'>
+		<strong>
+			<span style="font-size:13px;color:#414141;">&nbsp;</span>
+		</strong>
+	</p>
+	<p style='margin-top:2.45pt;margin-right:0cm;margin-bottom:0cm;margin-left:14.25pt;text-indent:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;'>
+		<strong>
+			<span style="font-size:13px;color:#414141;">Scientific Analyze Of Winning Probability Of Football And Basketball Bets And Extraction Of Statistics</span>
+		</strong>
+	</p>
+	<ul style="list-style-type: disc;margin-left:32.25px;">
+		<li>
+			<span style="font-size:13px;color:#414141;color:#414141;">It is an android application.</span>
+		</li>
+		<li>
+			<span style="font-size:13px;color:#414141;color:#414141;">Got match data from different websites with web scrapping by using Python.</span>
+		</li>
+		<li>
+			<span style="font-size:13px;color:#414141;color:#414141;">Used a specific algorithm in Python to analyze team powers (like attacking and defending) according to various parameters.</span>
+		</li>
+		<li>
+			<span style="font-size:13px;color:#414141;color:#414141;">Used Poisson Distribution Method to analyze the probability of winning.</span>
+		</li>
+	</ul>
+	<p style='margin-top:2.45pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:42.25pt;text-indent:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;'>
+		<span style="font-size:13px;color:#414141;">&nbsp;</span>
+	</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:2.45pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:42.25pt;'>
+		<strong>
+			<span style="font-size:13px;color:#414141;">Used Platforms &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :</span>
+		</strong>
+		<span style="font-size:13px;color:#414141;">&nbsp;Android Studio, Visual Studio Code, Firebase</span>
+	</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:2.45pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:42.25pt;'>
+		<strong>
+			<span style="font-size:13px;color:#414141;">Used Languages &nbsp; &nbsp; &nbsp; &nbsp; :&nbsp;</span>
+		</strong>
+		<span style="font-size:13px;color:#414141;">Java, Python</span>
+	</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:2.45pt;'>
+		<strong>
+			<span style="font-size:13px;color:#414141;">&nbsp;</span>
+		</strong>
+	</p>
+	<p style='margin-top:6.45pt;margin-right:0cm;margin-bottom:0cm;margin-left:5.65pt;font-size:13px;font-family:"Trebuchet MS",sans-serif;font-weight:bold;'>
+		<span style="color:#414141;">&nbsp; &nbsp;Student Information System with ASP.</span>NET
+	</p>
+	<ul style="list-style-type: disc;margin-left:40.25px;">
+		<li>
+			<span style="font-size:13px;">It is a website project that was developed to improve my coding abilities. It is not professional.</span>
+		</li>
+		<li>
+			<span style="font-size:13px;">Used bootstrap to visualize the front-end.</span>
+		</li>
+		<li>
+			<span style="font-size:13px;">It is a system that students can see their exam results, read announcement of their professors and send message to each other.</span>
+		</li>
+		<li>
+			<span style="font-size:13px;">Users can upload pictures to their profiles.</span>
+		</li>
+	</ul>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:2.45pt;'>&nbsp;</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:2.45pt;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		<strong>
+			<span style="font-size:13px;color:#414141;">Used Platforms &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;:</span>
+		</strong>
+		<span style="font-size:13px;color:#414141;">&nbsp;Visual Studio, Microsoft SQL Server</span>
+	</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:2.45pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:42.25pt;'>
+		<strong>
+			<span style="font-size:13px;color:#414141;">Used Languages &nbsp; &nbsp; &nbsp; &nbsp; :&nbsp;</span>
+		</strong>
+		<span style="font-size:13px;color:#414141;">C#</span>
+	</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:2.45pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:42.25pt;'>
+		<strong>
+			<span style="font-size:13px;color:#414141;">Front-end &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;:</span>
+		</strong>
+		<span style="font-size:13px;color:#414141;">&nbsp;HTML5, CSS3</span>
+	</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:2.45pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:42.25pt;'>
+		<span style="font-size:13px;color:#414141;">&nbsp;</span>
+	</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:2.45pt;'>
+		<span style="font-size:13px;color:#414141;">&nbsp;</span>
+	</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:2.45pt;'>
+		<span style="font-size:13px;color:#414141;">&nbsp; &nbsp; &nbsp;
+			<strong>Fruit Ninja Game</strong>
+		</span>
+	</p>
+	<ul style="list-style-type: disc;margin-left:40.4px;">
+		<li>
+			<span style="font-size:13px;color:#414141;color:#414141;">It is developed by using JavaFX.</span>
+		</li>
+		<li>
+			<span style="font-size:13px;color:#414141;color:#414141;">It is the re-coded version of the popular game named Fruit Ninja.</span>
+		</li>
+		<li>
+			<span style="font-size:13px;color:#414141;color:#414141;">Like on the original game, user should cut the fruits quickly, avoid bombs and get points.</span>
+		</li>
+		<li>
+			<span style="font-size:13px;color:#414141;color:#414141;">Users are able to see each other&rsquo;s scores.</span>
+		</li>
+	</ul>
+	<p style='margin-top:2.45pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:50.4pt;text-indent:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;'>
+		<span style="font-size:13px;color:#414141;">&nbsp;</span>
+	</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:2.45pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:42.25pt;'>
+		<span style="font-size:13px;color:#414141;">&nbsp; &nbsp;
+			<strong>Used Platforms &nbsp; &nbsp; &nbsp; &nbsp;:</strong> IntelliJ, MySQL Workbench
+		</span>
+	</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:2.45pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:42.25pt;'>
+		<strong>
+			<span style="font-size:13px;color:#414141;">&nbsp; &nbsp; Used Languages &nbsp; &nbsp; &nbsp;:&nbsp;</span>
+		</strong>
+		<span style="font-size:13px;color:#414141;">Java</span>
+	</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:2.45pt;'>
+		<span style="font-size:13px;color:#414141;">&nbsp;</span>
+	</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:2.45pt;'>
+		<span style="font-size:13px;color:#414141;">&nbsp; &nbsp; &nbsp;</span>
+	</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:2.45pt;'>
+		<strong>
+			<span style="font-size:13px;color:#414141;">&nbsp; &nbsp; &nbsp; &nbsp; Library Automation System with ASP.NET Web Forms</span>
+		</strong>
+	</p>
+	<ul style="list-style-type: disc;margin-left:46.05px;">
+		<li>
+			<span style="font-size:13px;color:#414141;color:#414141;">It is my first website project that was developed to improve my coding abilities. It is purely amateur.</span>
+		</li>
+		<li>
+			<span style="font-size:13px;color:#414141;color:#414141;">It is a system that has different panels like &ldquo;Administrator&rdquo; and &ldquo;User&rdquo;.</span>
+		</li>
+		<li>
+			<span style="font-size:13px;color:#414141;color:#414141;">Administrator&rsquo;s jobs are adding/deleting/updating books, authors, users.</span>
+		</li>
+		<li>
+			<span style="font-size:13px;color:#414141;color:#414141;">Users are able to sign the books they read, they can see who read the same book etc.</span>
+		</li>
+	</ul>
+	<p style='margin-top:2.45pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:56.05pt;text-indent:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;'>
+		<span style="font-size:13px;color:#414141;">&nbsp;</span>
+	</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:2.45pt;'>
+		<strong>
+			<span style="font-size:13px;color:#414141;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Used Platforms &nbsp; &nbsp; &nbsp;:</span>
+		</strong>
+		<span style="font-size:13px;color:#414141;">&nbsp;Visual Studio</span>
+	</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:2.45pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:42.25pt;'>
+		<strong>
+			<span style="font-size:13px;color:#414141;">&nbsp; &nbsp; &nbsp; Used Languages &nbsp; &nbsp;:&nbsp;</span>
+		</strong>
+		<span style="font-size:13px;color:#414141;">C#</span>
+	</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:2.45pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:42.25pt;'>
+		<span style="font-size:13px;color:#414141;">&nbsp;</span>
+	</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:2.45pt;'>
+		<span style="font-size:13px;color:#414141;">&nbsp; &nbsp;</span>
+	</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:2.45pt;'>
+		<span style="font-size:13px;color:#414141;">&nbsp; &nbsp; &nbsp; &nbsp;
+			<strong>Product Automation and Order System</strong>
+		</span>
+	</p>
+	<ul style="list-style-type: disc;margin-left:44px;">
+		<li>
+			<span style="font-size:13px;color:#414141;color:#414141;">It is an android application that is still developing.</span>
+		</li>
+		<li>
+			<span style="font-size:13px;color:#414141;color:#414141;">It is developed for a company who wants to update product price and quantity, control product stock and offer prices to their clients.</span>
+		</li>
+		<li>
+			<span style="font-size:13px;color:#414141;color:#414141;">The application has pictures, prices, quantity and information of all products.</span>
+		</li>
+	</ul>
+	<p style='margin-top:2.45pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:47.25pt;text-indent:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;'>
+		<span style="font-size:13px;color:#414141;">&nbsp;</span>
+	</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:2.45pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:42.25pt;'>
+		<strong>
+			<span style="font-size:13px;color:#414141;">&nbsp; Used Platforms &nbsp; &nbsp; &nbsp; &nbsp; :</span>
+		</strong>
+		<span style="font-size:13px;color:#414141;">&nbsp;Android Studio, Firebase</span>
+	</p>
+	<p style='margin-top:2.45pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:47.25pt;text-indent:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;'>
+		<strong>
+			<span style="font-size:13px;color:#414141;">Used Languages &nbsp; &nbsp; &nbsp; &nbsp;:&nbsp;</span>
+		</strong>
+		<span style="font-size:13px;color:#414141;">Java</span>
+	</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;'>&nbsp; &nbsp; &nbsp;</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;'>&nbsp; &nbsp; &nbsp; &nbsp; Other Small Windows Form Applications;</p>
+	<ul style="list-style-type: disc;margin-left:44px;">
+		<li>
+			<span style="font-size:13px;">Blackjack Game</span>
+		</li>
+		<li>
+			<span style="font-size:13px;">Who Wants To Be A Millionaire Game&nbsp;</span>
+		</li>
+		<li>
+			<span style="font-size:13px;">Car Racing Game&nbsp;</span>
+		</li>
+		<li>
+			<span style="font-size:13px;">Rolling Dice Game</span>
+		</li>
+	</ul>
+	<p style='margin-top:2.9pt;margin-right:0cm;margin-bottom:0cm;margin-left:45.4pt;text-indent:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;'>&nbsp;</p>
+	<p style='margin:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;margin-top:2.45pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:42.25pt;'>
+		<strong>
+			<span style="font-size:13px;color:#414141;">&nbsp; Used Platforms &nbsp; &nbsp; &nbsp; &nbsp; :</span>
+		</strong>
+		<span style="font-size:13px;color:#414141;">&nbsp;Visual Studio</span>
+	</p>
+	<p style='margin-top:2.45pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:47.25pt;text-indent:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;'>
+		<strong>
+			<span style="font-size:13px;color:#414141;">Used Languages &nbsp; &nbsp; &nbsp; &nbsp;:&nbsp;</span>
+		</strong>
+		<span style="font-size:13px;color:#414141;">C#</span>
+	</p>
+	<p style='margin-top:2.9pt;margin-right:0cm;margin-bottom:0cm;margin-left:45.4pt;text-indent:0cm;font-size:15px;font-family:"Trebuchet MS",sans-serif;'>&nbsp;</p>
+</div>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
